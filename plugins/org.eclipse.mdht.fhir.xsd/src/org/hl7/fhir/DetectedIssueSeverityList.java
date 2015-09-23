@@ -69,7 +69,7 @@ public enum DetectedIssueSeverityList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates the issue may result in noticable adverse adverse consequences but is unlikely to be life-threatening or cause permanent injury.
+	 * Indicates the issue may result in noticeable adverse consequences but is unlikely to be life-threatening or cause permanent injury.
 	 * <!-- end-model-doc -->
 	 * @see #MODERATE
 	 * @model name="moderate"

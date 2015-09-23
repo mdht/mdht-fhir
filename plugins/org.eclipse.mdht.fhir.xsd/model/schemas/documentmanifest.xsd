@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -81,7 +81,7 @@
           </xs:element>
           <xs:element name="created" minOccurs="0" maxOccurs="1" type="dateTime">
             <xs:annotation>
-              <xs:documentation xml:lang="en">When the document manifest was created for submission to the server (not necessarily the same thing as the actual resource last modified time, since it may be modified, replicated etc.).</xs:documentation>
+              <xs:documentation xml:lang="en">When the document manifest was created for submission to the server (not necessarily the same thing as the actual resource last modified time, since it may be modified, replicated, etc.).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="source" minOccurs="0" maxOccurs="1" type="uri">
@@ -140,12 +140,12 @@
         <xs:sequence>
           <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Related identifier to this DocumentManifest. If both id and ref are present they shall refer to the same thing.</xs:documentation>
+              <xs:documentation xml:lang="en">Related identifier to this DocumentManifest.  For example, Order numbers, accession numbers, XDW workflow numbers.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="ref" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Related Resource to this DocumentManifest. If both id and ref are present they shall refer to the same thing.</xs:documentation>
+              <xs:documentation xml:lang="en">Related Resource to this DocumentManifest. For example, Order, DiagnosticOrder,  Procedure, EligibilityRequest, etc.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>

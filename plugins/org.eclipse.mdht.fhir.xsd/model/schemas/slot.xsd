@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -112,14 +112,14 @@
       </xs:enumeration>
       <xs:enumeration value="busy-tentative">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval</xs:documentation>
+          <xs:documentation xml:lang="en">Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="SlotStatus">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The free/busy status of a slot</xs:documentation>
+      <xs:documentation xml:lang="en">The free/busy status of a slot.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>

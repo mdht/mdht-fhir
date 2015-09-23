@@ -32,7 +32,7 @@ public interface AuditEventSource extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Logical source location within the healthcare enterprise network.
+	 * Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Site</em>' containment reference.
 	 * @see #setSite(org.hl7.fhir.String)

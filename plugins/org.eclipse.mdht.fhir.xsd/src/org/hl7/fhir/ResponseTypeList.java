@@ -55,7 +55,7 @@ public enum ResponseTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The message was accepted and processed without error
+	 * The message was accepted and processed without error.
 	 * <!-- end-model-doc -->
 	 * @see #OK
 	 * @model name="ok"
@@ -69,7 +69,7 @@ public enum ResponseTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required
+	 * Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
 	 * <!-- end-model-doc -->
 	 * @see #TRANSIENT_ERROR
 	 * @model name="transientError" literal="transient-error"
@@ -83,7 +83,7 @@ public enum ResponseTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The message was rejected because of some content in it. There is no point in re-sending without change. The response narrative SHALL describe what the issue is.
+	 * The message was rejected because of some content in it. There is no point in re-sending without change. The response narrative SHALL describe the issue.
 	 * <!-- end-model-doc -->
 	 * @see #FATAL_ERROR
 	 * @model name="fatalError" literal="fatal-error"

@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A reference to a document.
+ * A reference to a document .
  * <!-- end-model-doc -->
  *
  * <p>
@@ -31,7 +31,7 @@ public interface DocumentReferenceContent extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The document or url to the document along with critical metadata to prove content has integrity.
+	 * The document or url of the document along with critical metadata to prove content has integrity.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attachment</em>' containment reference.
 	 * @see #setAttachment(Attachment)

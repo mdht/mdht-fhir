@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Base Resource for everything.
+ * This is the base resource type for everything.
  * <!-- end-model-doc -->
  *
  * <p>

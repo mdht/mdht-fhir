@@ -169,7 +169,7 @@ public enum DiagnosticOrderStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * the request is in preliminary form prior to being sent.
+	 * The request is in preliminary form prior to being sent.
 	 * <!-- end-model-doc -->
 	 * @see #DRAFT
 	 * @model name="draft"
@@ -267,7 +267,7 @@ public enum DiagnosticOrderStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The work has been complete, the report(s) released, and no further work is planned.
+	 * The work has been completed, the report(s) released, and no further work is planned.
 	 * <!-- end-model-doc -->
 	 * @see #COMPLETED
 	 * @model name="completed"
@@ -281,7 +281,7 @@ public enum DiagnosticOrderStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * the request has been withdrawn.
+	 * The request has been withdrawn.
 	 * <!-- end-model-doc -->
 	 * @see #CANCELLED
 	 * @model name="cancelled"

@@ -9,7 +9,7 @@ package org.hl7.fhir;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A patient’s point-in-time immunization and recommendation (i.e. forecasting a patient’s immunization eligibility according to a published schedule) with optional supporting justification.
+ * A patient's point-in-time immunization and recommendation (i.e. forecasting a patient's immunization eligibility according to a published schedule) with optional supporting justification.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -84,7 +84,7 @@ public interface ImmunizationRecommendationProtocol extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates the authority who published the protocol?  E.g. ACIP.
+	 * Indicates the authority who published the protocol.  For example, ACIP.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Authority</em>' containment reference.
 	 * @see #setAuthority(Reference)

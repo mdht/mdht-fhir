@@ -9,7 +9,7 @@ package org.hl7.fhir;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Indicates whether a resource instance represents a specific location or a class of locations
+ * Indicates whether a resource instance represents a specific location or a class of locations.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

@@ -184,7 +184,7 @@ public interface QuestionnaireQuestion extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Reference to a valueset containing the a list of codes representing permitted answers for the question.
+	 * Reference to a value set containing a list of codes representing permitted answers for the question.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Options</em>' containment reference.
 	 * @see #setOptions(Reference)

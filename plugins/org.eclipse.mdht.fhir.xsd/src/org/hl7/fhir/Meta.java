@@ -120,7 +120,7 @@ public interface Meta extends Element {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
+	 * Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tag</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getMeta_Tag()

@@ -69,7 +69,7 @@ public enum NamingSystemTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.)
+	 * The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
 	 * <!-- end-model-doc -->
 	 * @see #IDENTIFIER
 	 * @model name="identifier"
@@ -83,7 +83,7 @@ public enum NamingSystemTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The naming system is used as the root for other identifiers and naming systems
+	 * The naming system is used as the root for other identifiers and naming systems.
 	 * <!-- end-model-doc -->
 	 * @see #ROOT
 	 * @model name="root"

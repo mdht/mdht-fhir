@@ -168,7 +168,7 @@ public interface DocumentManifest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * When the document manifest was created for submission to the server (not necessarily the same thing as the actual resource last modified time, since it may be modified, replicated etc.).
+	 * When the document manifest was created for submission to the server (not necessarily the same thing as the actual resource last modified time, since it may be modified, replicated, etc.).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Created</em>' containment reference.
 	 * @see #setCreated(DateTime)

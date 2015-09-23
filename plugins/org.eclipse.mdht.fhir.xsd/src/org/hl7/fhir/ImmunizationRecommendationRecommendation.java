@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A patient’s point-in-time immunization and recommendation (i.e. forecasting a patient’s immunization eligibility according to a published schedule) with optional supporting justification.
+ * A patient's point-in-time immunization and recommendation (i.e. forecasting a patient's immunization eligibility according to a published schedule) with optional supporting justification.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -142,7 +142,7 @@ public interface ImmunizationRecommendationRecommendation extends BackboneElemen
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Vaccine date recommendations - e.g. earliest date to administer, latest date to administer, etc.
+	 * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Date Criterion</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getImmunizationRecommendationRecommendation_DateCriterion()

@@ -113,7 +113,7 @@ public enum DataElementStringencyList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The data element allows multiple units of measure having equivalent meaning; e.g. "cc" (cubic centimeter) and "mL".
+	 * The data element allows multiple units of measure having equivalent meaning; e.g. "cc" (cubic centimeter) and "mL" (milliliter).
 	 * <!-- end-model-doc -->
 	 * @see #EQUIVALENT
 	 * @model name="equivalent"
@@ -127,7 +127,7 @@ public enum DataElementStringencyList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The data element allows multiple units of measure that are convertable between each other (e.g. Inches and centimeters) and/or allows data to be captured in multiple value sets for which a known mapping exists allowing conversion of meaning.
+	 * The data element allows multiple units of measure that are convertable between each other (e.g. inches and centimeters) and/or allows data to be captured in multiple value sets for which a known mapping exists allowing conversion of meaning.
 	 * <!-- end-model-doc -->
 	 * @see #CONVERTABLE
 	 * @model name="convertable"

@@ -76,7 +76,7 @@ public interface ElementDefinitionType extends Element {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * If the type is a reference to another resource, how the resource is or can be aggreated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.
+	 * If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Aggregation</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getElementDefinitionType_Aggregation()

@@ -623,7 +623,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a problem List or a Summary Statement, such as a Discharge Summary.
+	 * Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses including: recording a diagnosis during an encounter; populating a problem list or a summary statement, such as a discharge summary.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Condition</em>' containment reference.
 	 * @see #setCondition(Condition)
@@ -701,7 +701,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Financial instrument which may be used to pay for or reimburse for health care products and services.
+	 * Financial instrument which may be used to pay for or reimburse health care products and services.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coverage</em>' containment reference.
 	 * @see #setCoverage(Coverage)
@@ -935,7 +935,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretation, and formatted representation of diagnostic reports.
+	 * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Diagnostic Report</em>' containment reference.
 	 * @see #setDiagnosticReport(DiagnosticReport)
@@ -987,7 +987,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A reference to a document.
+	 * A reference to a document .
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Document Reference</em>' containment reference.
 	 * @see #setDocumentReference(DocumentReference)
@@ -1091,7 +1091,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This resource provides the insurance Enrollment details to the insurer regarding a specified coverage.
+	 * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enrollment Request</em>' containment reference.
 	 * @see #setEnrollmentRequest(EnrollmentRequest)
@@ -1117,7 +1117,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This resource provides Enrollment and plan details from the processing of an Enrollment resource.
+	 * This resource provides enrollment and plan details from the processing of an Enrollment resource.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enrollment Response</em>' containment reference.
 	 * @see #setEnrollmentResponse(EnrollmentResponse)
@@ -1247,7 +1247,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.;.
+	 * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Goal</em>' containment reference.
 	 * @see #setGoal(Goal)
@@ -1351,7 +1351,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Representation of the content produced in a DICOM imaging study. A study comprises a set of Series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A Series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a Study may have multiple Series of different modalities.
+	 * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Imaging Study</em>' containment reference.
 	 * @see #setImagingStudy(ImagingStudy)
@@ -1403,7 +1403,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A patient’s point-in-time immunization and recommendation (i.e. forecasting a patient’s immunization eligibility according to a published schedule) with optional supporting justification.
+	 * A patient's point-in-time immunization and recommendation (i.e. forecasting a patient's immunization eligibility according to a published schedule) with optional supporting justification.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Immunization Recommendation</em>' containment reference.
 	 * @see #setImmunizationRecommendation(ImmunizationRecommendation)
@@ -1585,7 +1585,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a Pharmacy system responding to a Medication Order.
+	 * Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Medication Dispense</em>' containment reference.
 	 * @see #setMedicationDispense(MedicationDispense)
@@ -1637,9 +1637,9 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A record of a medication that is being consumed by a patient.   A medication statements may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from e.g. the patients’ memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains.
+	 * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from e.g. the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains 
 	 * 
-	 * The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the Medication Statement information may come from the patient’s memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication Administration is more formal and is not missing detailed information.
+	 * The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Medication Statement</em>' containment reference.
 	 * @see #setMedicationStatement(MedicationStatement)
@@ -1665,7 +1665,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
+	 * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Message Header</em>' containment reference.
 	 * @see #setMessageHeader(MessageHeader)
@@ -1899,7 +1899,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This special resource type is used to represent [operation](operations.html] request and response. It has no other use, and there is no RESTful end=point associated with it.
+	 * This special resource type is used to represent an operation request and response (operations.html). It has no other use, and there is no RESTful endpoint associated with it.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference.
 	 * @see #setParameters(Parameters)
@@ -2055,7 +2055,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An action that is or was performed on a patient. This can be a physical 'thing' like an operation, or less invasive like counseling or hypnotherapy.
+	 * An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Procedure</em>' containment reference.
 	 * @see #setProcedure(Procedure)
@@ -2159,7 +2159,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact Security, Privacy, and Trust policies.
+	 * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Provenance</em>' containment reference.
 	 * @see #setProvenance(Provenance)
@@ -2237,7 +2237,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation.
+	 * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Referral Request</em>' containment reference.
 	 * @see #setReferralRequest(ReferralRequest)
@@ -2341,7 +2341,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A Search Parameter that defines a named search item that can be used to search/filter on a resource.
+	 * A search parameter that defines a named search item that can be used to search/filter on a resource.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Search Parameter</em>' containment reference.
 	 * @see #setSearchParameter(SearchParameter)
@@ -2393,7 +2393,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Sample for analysis.
+	 * A sample to be used for analysis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Specimen</em>' containment reference.
 	 * @see #setSpecimen(Specimen)
@@ -2497,7 +2497,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Record of delivery of what is in the supply.
+	 * Record of delivery of what is supplied.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Supply Delivery</em>' containment reference.
 	 * @see #setSupplyDelivery(SupplyDelivery)

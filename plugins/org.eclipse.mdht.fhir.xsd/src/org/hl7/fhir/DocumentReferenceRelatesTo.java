@@ -9,7 +9,7 @@ package org.hl7.fhir;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A reference to a document.
+ * A reference to a document .
  * <!-- end-model-doc -->
  *
  * <p>

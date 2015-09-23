@@ -47,7 +47,7 @@ public interface MedicationAdministration extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * External identifier - FHIR will generate its own internal IDs (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated.
+	 * External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getMedicationAdministration_Identifier()
@@ -88,7 +88,7 @@ public interface MedicationAdministration extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The person or animal to whom the medication was given.
+	 * The person or animal receiving the medication.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Patient</em>' containment reference.
 	 * @see #setPatient(Reference)
@@ -140,7 +140,7 @@ public interface MedicationAdministration extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The visit or admission the or other contact between patient and health care provider the medication administration was performed as part of.
+	 * The visit, admission or other contact between patient and health care provider the medication administration was performed as part of.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Encounter</em>' containment reference.
 	 * @see #setEncounter(Reference)
@@ -359,7 +359,7 @@ public interface MedicationAdministration extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The device used in administering the medication to the patient; e.g. a particular infusion pump.
+	 * The device used in administering the medication to the patient.  For example, a particular infusion pump.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Device</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getMedicationAdministration_Device()

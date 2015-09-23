@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A Search Parameter that defines a named search item that can be used to search/filter on a resource.
+ * A search parameter that defines a named search item that can be used to search/filter on a resource.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

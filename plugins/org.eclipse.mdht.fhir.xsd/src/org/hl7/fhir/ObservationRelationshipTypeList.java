@@ -85,7 +85,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group
+	 * This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.
 	 * <!-- end-model-doc -->
 	 * @see #HAS_MEMBER
 	 * @model name="hasMember" literal="has-member"
@@ -99,7 +99,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The target resource (Observation or QuestionnaireAnswer) is part of the information from which this observation value is derived. (e.g. calculated anion gap, Apgar score)  NOTE:  "derived-from" is only logical choice when referencing QuestionnaireAnswer
+	 * The target resource (Observation or QuestionnaireResponse) is part of the information from which this observation value is derived. (e.g. calculated anion gap, Apgar score)  NOTE:  "derived-from" is only logical choice when referencing QuestionnaireResponse.
 	 * <!-- end-model-doc -->
 	 * @see #DERIVED_FROM
 	 * @model name="derivedFrom" literal="derived-from"
@@ -113,7 +113,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This observation follows the target observation (e.g. timed tests such as Glucose Tolerance Test)
+	 * This observation follows the target observation (e.g. timed tests such as Glucose Tolerance Test).
 	 * <!-- end-model-doc -->
 	 * @see #SEQUEL_TO
 	 * @model name="sequelTo" literal="sequel-to"
@@ -127,7 +127,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This observation replaces a previous observation (i.e. a revised value). The target observation is now obsolete
+	 * This observation replaces a previous observation (i.e. a revised value). The target observation is now obsolete.
 	 * <!-- end-model-doc -->
 	 * @see #REPLACES
 	 * @model name="replaces"
@@ -141,7 +141,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The value of the target observation qualifies (refines) the semantics of the source observation (e.g. a lipemia measure target from a plasma measure)
+	 * The value of the target observation qualifies (refines) the semantics of the source observation (e.g. a lipemia measure target from a plasma measure).
 	 * <!-- end-model-doc -->
 	 * @see #QUALIFIED_BY
 	 * @model name="qualifiedBy" literal="qualified-by"
@@ -155,7 +155,7 @@ public enum ObservationRelationshipTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The value of the target observation interferes (degrades quality, or prevents valid observation) with the semantics of the source observation (e.g. a hemolysis measure target from a plasma potassium measure which has no value)
+	 * The value of the target observation interferes (degrades quality, or prevents valid observation) with the semantics of the source observation (e.g. a hemolysis measure target from a plasma potassium measure which has no value).
 	 * <!-- end-model-doc -->
 	 * @see #INTERFERED_BY
 	 * @model name="interferedBy" literal="interfered-by"

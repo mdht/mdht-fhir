@@ -9,7 +9,7 @@ package org.hl7.fhir;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * The verification status to support or decline the clinical status of the Condition or diagnosis.
+ * The verification status to support or decline the clinical status of the condition or diagnosis.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

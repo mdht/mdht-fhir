@@ -141,7 +141,7 @@ public interface CompositionSection extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * What order applies to the items in the section entries.
+	 * Specifies the order applied to the items in the section entries.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ordered By</em>' containment reference.
 	 * @see #setOrderedBy(CodeableConcept)

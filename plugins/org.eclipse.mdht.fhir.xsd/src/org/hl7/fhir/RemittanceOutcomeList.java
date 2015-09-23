@@ -59,7 +59,7 @@ public enum RemittanceOutcomeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The processing identified with errors.
+	 * The processing identified errors.
 	 * <!-- end-model-doc -->
 	 * @see #ERROR
 	 * @model name="error"

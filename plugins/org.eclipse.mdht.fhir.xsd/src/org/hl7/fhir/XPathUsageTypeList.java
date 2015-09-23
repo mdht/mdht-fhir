@@ -75,7 +75,7 @@ public enum XPathUsageTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The search parameter is derived directly from the selected nodes based on the type definitions
+	 * The search parameter is derived directly from the selected nodes based on the type definitions.
 	 * <!-- end-model-doc -->
 	 * @see #NORMAL
 	 * @model name="normal"
@@ -89,7 +89,7 @@ public enum XPathUsageTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The search parameter is derived by a phonetic transform from the selected nodes
+	 * The search parameter is derived by a phonetic transform from the selected nodes.
 	 * <!-- end-model-doc -->
 	 * @see #PHONETIC
 	 * @model name="phonetic"
@@ -103,7 +103,7 @@ public enum XPathUsageTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The search parameter is based on a spatial transform of the selected nodes
+	 * The search parameter is based on a spatial transform of the selected nodes.
 	 * <!-- end-model-doc -->
 	 * @see #NEARBY
 	 * @model name="nearby"
@@ -117,7 +117,7 @@ public enum XPathUsageTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle
+	 * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
 	 * <!-- end-model-doc -->
 	 * @see #DISTANCE
 	 * @model name="distance"
@@ -131,7 +131,7 @@ public enum XPathUsageTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The interpretation of the xpath statement is unknown (and can't be automated)
+	 * The interpretation of the xpath statement is unknown (and can't be automated).
 	 * <!-- end-model-doc -->
 	 * @see #OTHER
 	 * @model name="other"

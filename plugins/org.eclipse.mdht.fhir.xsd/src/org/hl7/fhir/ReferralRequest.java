@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation.
+ * Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *
@@ -73,7 +73,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Business Id that uniquely identifies the referral/care transfer request instance.
+	 * Business identifier that uniquely identifies the referral/care transfer request instance.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getReferralRequest_Identifier()
@@ -140,7 +140,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indication of the clinical domain or discipline to which the referral or transfer of care request is sent.
+	 * Indication of the clinical domain or discipline to which the referral or transfer of care request is sent.  For example: Cardiology Gastroenterology Diabetology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Specialty</em>' containment reference.
 	 * @see #setSpecialty(CodeableConcept)
@@ -218,7 +218,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The healthcare provider or provider organization who/which initaited the referral/transfer of care request. Can also be  Patient (a self referral).
+	 * The healthcare provider or provider organization who/which initiated the referral/transfer of care request. Can also be  Patient (a self referral).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Requester</em>' containment reference.
 	 * @see #setRequester(Reference)
@@ -312,7 +312,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Description of clinical condition indicating why referral/transfer of care is requested.
+	 * Description of clinical condition indicating why referral/transfer of care is requested.  For example:  Pathological Anomalies, Disabled (physical or mental),  Behavioral Management.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reason</em>' containment reference.
 	 * @see #setReason(CodeableConcept)
@@ -338,7 +338,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The reason gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary.
+	 * The reason element gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
 	 * @see #setDescription(org.hl7.fhir.String)
@@ -365,7 +365,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The service(s) that is/are requested to be provided to the patient.
+	 * The service(s) that is/are requested to be provided to the patient.  For example: cardiac pacemaker insertion.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Service Requested</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getReferralRequest_ServiceRequested()
@@ -381,7 +381,7 @@ public interface ReferralRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care.
+	 * Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care.  For example: Presenting problems/chief complaints Medical History Family History Alerts Allergy/Intolerance and Adverse Reactions Medications Observations/Assessments (may include cognitive and fundtional assessments) Diagnostic Reports Care Plan.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Supporting Information</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getReferralRequest_SupportingInformation()

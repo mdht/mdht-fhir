@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This resource provides Enrollment and plan details from the processing of an Enrollment resource.
+ * This resource provides enrollment and plan details from the processing of an Enrollment resource.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -38,12 +38,12 @@
   <xs:include schemaLocation="fhir-base.xsd"/>
   <xs:element name="MessageHeader" type="MessageHeader">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
+      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="MessageHeader">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
+      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -110,7 +110,7 @@
   </xs:complexType>
   <xs:complexType name="MessageHeader.Response">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
+      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -136,7 +136,7 @@
   </xs:complexType>
   <xs:complexType name="MessageHeader.Source">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
+      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -172,7 +172,7 @@
   </xs:complexType>
   <xs:complexType name="MessageHeader.Destination">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The Reference(s) that are the subject of the action as well as other Information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
+      <xs:documentation xml:lang="en">The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -200,17 +200,17 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="ok">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The message was accepted and processed without error</xs:documentation>
+          <xs:documentation xml:lang="en">The message was accepted and processed without error.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="transient-error">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required</xs:documentation>
+          <xs:documentation xml:lang="en">Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="fatal-error">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The message was rejected because of some content in it. There is no point in re-sending without change. The response narrative SHALL describe what the issue is.</xs:documentation>
+          <xs:documentation xml:lang="en">The message was rejected because of some content in it. There is no point in re-sending without change. The response narrative SHALL describe the issue.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>

@@ -9,7 +9,7 @@ package org.hl7.fhir;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A patient’s point-in-time immunization and recommendation (i.e. forecasting a patient’s immunization eligibility according to a published schedule) with optional supporting justification.
+ * A patient's point-in-time immunization and recommendation (i.e. forecasting a patient's immunization eligibility according to a published schedule) with optional supporting justification.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -30,7 +30,7 @@ public interface ImmunizationRecommendationDateCriterion extends BackboneElement
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Date classification of recommendation - e.g. earliest date to give, latest date to give, etc.
+	 * Date classification of recommendation.  For example, earliest date to give, latest date to give, etc.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Code</em>' containment reference.
 	 * @see #setCode(CodeableConcept)
@@ -56,7 +56,7 @@ public interface ImmunizationRecommendationDateCriterion extends BackboneElement
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Date recommendation.
+	 * The date whose meaning is specified by dateCriterion.code.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(DateTime)

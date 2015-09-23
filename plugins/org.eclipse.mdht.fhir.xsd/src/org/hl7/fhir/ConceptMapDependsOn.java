@@ -31,7 +31,7 @@ public interface ConceptMapDependsOn extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A reference to a specific concept that holds a coded value. This can be an element in a FHIR resource, or a specific reference to a data element in a different specification (e.g. v2) or a general reference to a kind of data field, or a reference to a value set with an appropriately narrow definition.
+	 * A reference to a specific concept that holds a coded value. This can be an element in a FHIR resource, or a specific reference to a data element in a different specification (e.g. HL7 v2) or a general reference to a kind of data field, or a reference to a value set with an appropriately narrow definition.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Element</em>' containment reference.
 	 * @see #setElement(Uri)
@@ -83,7 +83,7 @@ public interface ConceptMapDependsOn extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Identity (code or path) or the element/item that the map depends on / refers to.
+	 * Identity (code or path) or the element/item/ValueSet that the map depends on / refers to.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Code</em>' containment reference.
 	 * @see #setCode(org.hl7.fhir.String)

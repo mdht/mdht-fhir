@@ -55,7 +55,7 @@ public enum SupplyDeliveryStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Supply has been requested, but not delivered
+	 * Supply has been requested, but not delivered.
 	 * <!-- end-model-doc -->
 	 * @see #IN_PROGRESS
 	 * @model name="inProgress" literal="in-progress"
@@ -69,7 +69,7 @@ public enum SupplyDeliveryStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Supply has been delivered. ( "completed")
+	 * Supply has been delivered ("completed").
 	 * <!-- end-model-doc -->
 	 * @see #COMPLETED
 	 * @model name="completed"
@@ -83,7 +83,7 @@ public enum SupplyDeliveryStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Dispensing was not completed
+	 * Dispensing was not completed.
 	 * <!-- end-model-doc -->
 	 * @see #ABANDONED
 	 * @model name="abandoned"

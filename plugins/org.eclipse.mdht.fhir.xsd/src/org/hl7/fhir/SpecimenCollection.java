@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Sample for analysis.
+ * A sample to be used for analysis.
  * <!-- end-model-doc -->
  *
  * <p>

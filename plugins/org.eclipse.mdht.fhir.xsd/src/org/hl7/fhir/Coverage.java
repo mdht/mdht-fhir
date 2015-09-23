@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Financial instrument which may be used to pay for or reimburse for health care products and services.
+ * Financial instrument which may be used to pay for or reimburse health care products and services.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

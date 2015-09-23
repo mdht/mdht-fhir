@@ -55,7 +55,7 @@ public enum StructureDefinitionKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A data type - either a primitive or complex structure that defines a set of data elements. These can be used throughout Resource and extension definitions
+	 * A data type - either a primitive or complex structure that defines a set of data elements. These can be used throughout Resource and extension definitions.
 	 * <!-- end-model-doc -->
 	 * @see #DATATYPE
 	 * @model name="datatype"
@@ -69,7 +69,7 @@ public enum StructureDefinitionKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A resource defined by the FHIR specification
+	 * A resource defined by the FHIR specification.
 	 * <!-- end-model-doc -->
 	 * @see #RESOURCE
 	 * @model name="resource"
@@ -83,7 +83,7 @@ public enum StructureDefinitionKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A logical model - a conceptual package of data that will be mapped to resources for implementation
+	 * A logical model - a conceptual package of data that will be mapped to resources for implementation.
 	 * <!-- end-model-doc -->
 	 * @see #LOGICAL
 	 * @model name="logical"

@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -638,101 +638,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="ResourceVersionPolicy-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="no-version">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">VersionId meta-property is not suppoerted (server) or used (client).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="versioned">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">VersionId meta-property is suppoerted (server) or used (client).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="versioned-update">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">VersionId is must be correct for updates (server) or will be specified (If-match header) for updates (client).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="ResourceVersionPolicy">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">How the system supports versioning for a resource.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="ResourceVersionPolicy-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="MessageSignificanceCategory-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Consequence">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The message represents/requests a change that should not be processed more than once; e.g. Making a booking for an appointment.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Currency">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Notification">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="MessageSignificanceCategory">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The impact of the content of a message.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="MessageSignificanceCategory-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="TransactionMode-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="not-supported">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Neither batch or transaction is supported.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="batch">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Batches are  supported.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="transaction">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Transactions are supported.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="both">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Both batches and transactions are supported.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="TransactionMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A code that indicates how transactions are supported.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="TransactionMode-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="DocumentMode-list">
     <xs:restriction base="xs:string">
       <xs:enumeration value="producer">
@@ -755,6 +660,181 @@
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="DocumentMode-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="SystemRestfulInteraction-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="transaction">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="search-system">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="history-system">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SystemRestfulInteraction">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Operations supported by REST at the system level.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="SystemRestfulInteraction-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ResourceVersionPolicy-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="no-version">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">VersionId meta-property is not supported (server) or used (client).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="versioned">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">VersionId meta-property is supported (server) or used (client).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="versioned-update">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">VersionId is must be correct for updates (server) or will be specified (If-match header) for updates (client).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResourceVersionPolicy">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">How the system supports versioning for a resource.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ResourceVersionPolicy-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="RestfulConformanceMode-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="client">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The application acts as a client for this resource.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="server">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The application acts as a server for this resource.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RestfulConformanceMode">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The mode of a RESTful conformance statement.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="RestfulConformanceMode-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TypeRestfulInteraction-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="read">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="vread">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="update">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="delete">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="history-instance">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="validate">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="history-type">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="create">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="search-type">
+        <xs:annotation>
+          <xs:documentation xml:lang="en"></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TypeRestfulInteraction">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Operations supported by REST at the type or instance level.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="TypeRestfulInteraction-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ConditionalDeleteStatus-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="not-supported">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">No support for conditional deletes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="single">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conditional deletes are supported, but only single resources at a time.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="multiple">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Conditional deletes are supported, and multiple resources can be deleted in a single interaction.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ConditionalDeleteStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A code that indicates how the server supports conditional delete.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ConditionalDeleteStatus-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -853,6 +933,61 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="ConformanceEventMode-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sender">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The application sends requests and receives responses.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="receiver">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The application receives requests and sends responses.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ConformanceEventMode">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The mode of a message conformance statement.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="ConformanceEventMode-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MessageSignificanceCategory-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Consequence">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The message represents/requests a change that should not be processed more than once; e.g. Making a booking for an appointment.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Currency">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The message represents a response to query for current information. Retrospective processing is wrong and/or wasteful.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Notification">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The content is not necessarily intended to be current, and it can be reprocessed, though there may be version issues created by processing old notifications.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MessageSignificanceCategory">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">The impact of the content of a message.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="MessageSignificanceCategory-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:simpleType name="UnknownContentCode-list">
     <xs:restriction base="xs:string">
       <xs:enumeration value="no">
@@ -888,173 +1023,38 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="TypeRestfulInteraction-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="read">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="vread">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="update">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="delete">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="history-instance">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="validate">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="history-type">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="create">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="search-type">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="TypeRestfulInteraction">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Operations supported by REST at the type or instance level.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="TypeRestfulInteraction-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="ConformanceEventMode-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="sender">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The application sends requests and receives responses.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="receiver">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The application receives requests and sends responses.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="ConformanceEventMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The mode of a message conformance statement.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="ConformanceEventMode-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="SystemRestfulInteraction-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="transaction">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="search-system">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="history-system">
-        <xs:annotation>
-          <xs:documentation xml:lang="en"></xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="SystemRestfulInteraction">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Operations supported by REST at the system level.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="SystemRestfulInteraction-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="RestfulConformanceMode-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="client">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The application acts as a client for this resource.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="server">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The application acts as a server for this resource.</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="RestfulConformanceMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">The mode of a RESTful conformance statement.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="RestfulConformanceMode-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="ConditionalDeleteStatus-list">
+  <xs:simpleType name="TransactionMode-list">
     <xs:restriction base="xs:string">
       <xs:enumeration value="not-supported">
         <xs:annotation>
-          <xs:documentation xml:lang="en">No support for conditional deletes.</xs:documentation>
+          <xs:documentation xml:lang="en">Neither batch or transaction is supported.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="single">
+      <xs:enumeration value="batch">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Conditional deletes are supported, but only single resources at a time.</xs:documentation>
+          <xs:documentation xml:lang="en">Batches are  supported.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="multiple">
+      <xs:enumeration value="transaction">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Conditional deletes are supported, and multiple resources can be deleted in a single interaction.</xs:documentation>
+          <xs:documentation xml:lang="en">Transactions are supported.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="both">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Both batches and transactions are supported.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="ConditionalDeleteStatus">
+  <xs:complexType name="TransactionMode">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A code that indicates how the server supports conditional delete.</xs:documentation>
+      <xs:documentation xml:lang="en">A code that indicates how transactions are supported.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Element">
-        <xs:attribute name="value" type="ConditionalDeleteStatus-list" use="optional"/>
+        <xs:attribute name="value" type="TransactionMode-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

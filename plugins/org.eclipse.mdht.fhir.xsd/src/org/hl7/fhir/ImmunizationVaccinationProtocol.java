@@ -89,7 +89,7 @@ public interface ImmunizationVaccinationProtocol extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates the authority who published the protocol?  E.g. ACIP.
+	 * Indicates the authority who published the protocol.  E.g. ACIP.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Authority</em>' containment reference.
 	 * @see #setAuthority(Reference)
@@ -209,7 +209,7 @@ public interface ImmunizationVaccinationProtocol extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Provides an explanation as to why a immunization event should or should not count against the protocol.
+	 * Provides an explanation as to why an immunization event should or should not count against the protocol.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Dose Status Reason</em>' containment reference.
 	 * @see #setDoseStatusReason(CodeableConcept)

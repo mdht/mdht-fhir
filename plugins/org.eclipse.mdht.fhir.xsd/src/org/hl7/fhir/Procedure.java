@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * An action that is or was performed on a patient. This can be a physical 'thing' like an operation, or less invasive like counseling or hypnotherapy.
+ * An action that is or was performed on a patient. This can be a physical intervention like an operation, or less invasive like counseling or hypnotherapy.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *
@@ -69,7 +69,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The person on whom the procedure was performed.
+	 * The person, animal or group on which the procedure was performed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Subject</em>' containment reference.
 	 * @see #setSubject(Reference)
@@ -95,7 +95,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A code specifying the state of the procedure record. Generally this will be in-progress or completed state.
+	 * A code specifying the state of the procedure. Generally this will be in-progress or completed state.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Status</em>' containment reference.
 	 * @see #setStatus(ProcedureStatus)
@@ -147,7 +147,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The specific procedure that is performed. Use text if the exact nature of the procedure can't be coded (e.g. "Laparoscopic Appendectomy").
+	 * The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded (e.g. "Laparoscopic Appendectomy").
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Code</em>' containment reference.
 	 * @see #setCode(CodeableConcept)
@@ -381,7 +381,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The location where the procedure actually happened; e.g. a newborn at home, a tracheostomy at a restaurant.
+	 * The location where the procedure actually happened.  E.g. a newborn at home, a tracheostomy at a restaurant.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Location</em>' containment reference.
 	 * @see #setLocation(Reference)
@@ -407,7 +407,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * What was the outcome of the procedure - did it resolve reasons why the procedure was performed?
+	 * The outcome of the procedure - did it resolve reasons for the procedure being performed?
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Outcome</em>' containment reference.
 	 * @see #setOutcome(CodeableConcept)
@@ -434,7 +434,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This could be a histology result. There could potentially be multiple reports - e.g. if this was a procedure that made multiple biopsies.
+	 * This could be a histology result, pathology report, surgical report, etc..
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Report</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedure_Report()
@@ -450,7 +450,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Any complications that occurred during the procedure, or in the immediate post-operative period. These are generally tracked separately from the notes, which typically will describe the procedure itself rather than any 'post procedure' issues.
+	 * Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the notes, which will typically describe the procedure itself rather than any 'post procedure' issues.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Complication</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedure_Complication()
@@ -466,7 +466,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * If the procedure required specific follow up - e.g. removal of sutures. The followup may be represented as a simple note, or potentially could be more complex in which case the CarePlan resource can be used.
+	 * If the procedure required specific follow up - e.g. removal of sutures. The followup may be represented as a simple note, or could potentially be more complex in which case the CarePlan resource can be used.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Follow Up</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedure_FollowUp()
@@ -481,7 +481,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A reference to a resource that contains about this procedure's request.
+	 * A reference to a resource that contains details of the request for this procedure.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Request</em>' containment reference.
 	 * @see #setRequest(Reference)
@@ -508,7 +508,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Any other notes about the procedure - e.g. the operative notes.
+	 * Any other notes about the procedure.  E.g. the operative notes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Notes</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedure_Notes()
@@ -540,7 +540,7 @@ public interface Procedure extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Identifies medications, devices and other substance used as part of the procedure.
+	 * Identifies medications, devices and any other substance used as part of the procedure.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Used</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedure_Used()

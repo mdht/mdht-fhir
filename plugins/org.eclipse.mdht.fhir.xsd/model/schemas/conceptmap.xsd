@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -101,12 +101,12 @@
           </xs:element>
           <xs:element name="useContext" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of concept maps.</xs:documentation>
+              <xs:documentation xml:lang="en">The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of concept map instances.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="requirements" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Explains why this concept map is needed and why it's been constrained as it has.</xs:documentation>
+              <xs:documentation xml:lang="en">Explains why this concept map is needed and why it has been constrained as it has.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="string">
@@ -234,7 +234,7 @@
         <xs:sequence>
           <xs:element name="element" minOccurs="1" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A reference to a specific concept that holds a coded value. This can be an element in a FHIR resource, or a specific reference to a data element in a different specification (e.g. v2) or a general reference to a kind of data field, or a reference to a value set with an appropriately narrow definition.</xs:documentation>
+              <xs:documentation xml:lang="en">A reference to a specific concept that holds a coded value. This can be an element in a FHIR resource, or a specific reference to a data element in a different specification (e.g. HL7 v2) or a general reference to a kind of data field, or a reference to a value set with an appropriately narrow definition.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="codeSystem" minOccurs="1" maxOccurs="1" type="uri">
@@ -244,7 +244,7 @@
           </xs:element>
           <xs:element name="code" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identity (code or path) or the element/item that the map depends on / refers to.</xs:documentation>
+              <xs:documentation xml:lang="en">Identity (code or path) or the element/item/ValueSet that the map depends on / refers to.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>

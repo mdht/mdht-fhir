@@ -45,7 +45,7 @@ public enum GuideDependencyTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The guide is referred to by URL
+	 * The guide is referred to by URL.
 	 * <!-- end-model-doc -->
 	 * @see #REFERENCE
 	 * @model name="reference"
@@ -59,7 +59,7 @@ public enum GuideDependencyTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The guide is embedded in this guide when published
+	 * The guide is embedded in this guide when published.
 	 * <!-- end-model-doc -->
 	 * @see #INCLUSION
 	 * @model name="inclusion"

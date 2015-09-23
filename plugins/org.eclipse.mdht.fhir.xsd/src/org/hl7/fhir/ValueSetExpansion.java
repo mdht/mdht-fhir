@@ -87,7 +87,7 @@ public interface ValueSetExpansion extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The total nober of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
+	 * The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Total</em>' containment reference.
 	 * @see #setTotal(org.hl7.fhir.Integer)
@@ -113,7 +113,7 @@ public interface ValueSetExpansion extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * If paging is being used, the offset at which this resource starts - e.g. this resource is a partial view into the expansion. If paging is not being used, this element SHALL not be present.
+	 * If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL not be present.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Offset</em>' containment reference.
 	 * @see #setOffset(org.hl7.fhir.Integer)

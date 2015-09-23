@@ -105,7 +105,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page of content that is included in the implementation guide. It has no particular function
+	 * This is a page of content that is included in the implementation guide. It has no particular function.
 	 * <!-- end-model-doc -->
 	 * @see #PAGE
 	 * @model name="page"
@@ -119,7 +119,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that represents a human readable rendering of an example
+	 * This is a page that represents a human readable rendering of an example.
 	 * <!-- end-model-doc -->
 	 * @see #EXAMPLE
 	 * @model name="example"
@@ -133,7 +133,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that represents a list of resources of one or more types
+	 * This is a page that represents a list of resources of one or more types.
 	 * <!-- end-model-doc -->
 	 * @see #LIST
 	 * @model name="list"
@@ -147,7 +147,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that is where an included guide is injected
+	 * This is a page showing where an included guide is injected.
 	 * <!-- end-model-doc -->
 	 * @see #INCLUDE
 	 * @model name="include"
@@ -161,7 +161,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that lists the resources of a given type, and also creates pages for all the listed types as other pages in the section
+	 * This is a page that lists the resources of a given type, and also creates pages for all the listed types as other pages in the section.
 	 * <!-- end-model-doc -->
 	 * @see #DIRECTORY
 	 * @model name="directory"
@@ -175,7 +175,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that creates the listed resources as a dictionary
+	 * This is a page that creates the listed resources as a dictionary.
 	 * <!-- end-model-doc -->
 	 * @see #DICTIONARY
 	 * @model name="dictionary"
@@ -189,7 +189,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a generated page that contains the table of contents
+	 * This is a generated page that contains the table of contents.
 	 * <!-- end-model-doc -->
 	 * @see #TOC
 	 * @model name="toc"
@@ -203,7 +203,7 @@ public enum GuidePageKindList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a page that represents a presented resource. This is typically used for generated conformance resource presentations
+	 * This is a page that represents a presented resource. This is typically used for generated conformance resource presentations.
 	 * <!-- end-model-doc -->
 	 * @see #RESOURCE
 	 * @model name="resource"

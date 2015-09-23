@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A reference to a document.
+ * A reference to a document .
  * <!-- end-model-doc -->
  *
  * <p>

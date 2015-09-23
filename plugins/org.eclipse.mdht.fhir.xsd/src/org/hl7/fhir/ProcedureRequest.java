@@ -64,7 +64,7 @@ public interface ProcedureRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The patient who will receive the procedure or a group of subjects.
+	 * The person, animal or group that should receive the procedure.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Subject</em>' containment reference.
 	 * @see #setSubject(Reference)
@@ -90,7 +90,7 @@ public interface ProcedureRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The specific procedure that is ordered. Use text if the exact nature of the procedure can't be coded.
+	 * The specific procedure that is ordered. Use text if the exact nature of the procedure cannot be coded.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Code</em>' containment reference.
 	 * @see #setCode(CodeableConcept)
@@ -117,7 +117,7 @@ public interface ProcedureRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates the sites on the subject's body where the procedure should be performed ( i.e. the target sites).
+	 * Indicates the sites on the subject's body where the procedure should be performed (I.e. the target sites).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Body Site</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getProcedureRequest_BodySite()
@@ -293,7 +293,7 @@ public interface ProcedureRequest extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * E.g. surgeon, anaethetist, endoscopist.
+	 * For example, the surgeon, anaethetist, endoscopist, etc.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Performer</em>' containment reference.
 	 * @see #setPerformer(Reference)

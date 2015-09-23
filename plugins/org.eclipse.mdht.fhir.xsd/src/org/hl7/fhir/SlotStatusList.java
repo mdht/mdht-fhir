@@ -107,7 +107,7 @@ public enum SlotStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval
+	 * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
 	 * <!-- end-model-doc -->
 	 * @see #BUSY_TENTATIVE
 	 * @model name="busyTentative" literal="busy-tentative"

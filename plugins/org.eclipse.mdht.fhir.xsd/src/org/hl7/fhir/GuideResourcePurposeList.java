@@ -85,7 +85,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource is intended as an example
+	 * The resource is intended as an example.
 	 * <!-- end-model-doc -->
 	 * @see #EXAMPLE
 	 * @model name="example"
@@ -99,7 +99,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource defines a value set or concept map used in the Implementation Guide
+	 * The resource defines a value set or concept map used in the implementation guide.
 	 * <!-- end-model-doc -->
 	 * @see #TERMINOLOGY
 	 * @model name="terminology"
@@ -113,7 +113,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource defines a profile (StructureDefinition) that is used in the implementation guide
+	 * The resource defines a profile (StructureDefinition) that is used in the implementation guide.
 	 * <!-- end-model-doc -->
 	 * @see #PROFILE
 	 * @model name="profile"
@@ -127,7 +127,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource defines an extension (StructureDefinition) that is used in the implementation guide
+	 * The resource defines an extension (StructureDefinition) that is used in the implementation guide.
 	 * <!-- end-model-doc -->
 	 * @see #EXTENSION
 	 * @model name="extension"
@@ -141,7 +141,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource contains a dictionary that is part of the implementation guide
+	 * The resource contains a dictionary that is part of the implementation guide.
 	 * <!-- end-model-doc -->
 	 * @see #DICTIONARY
 	 * @model name="dictionary"
@@ -155,7 +155,7 @@ public enum GuideResourcePurposeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource defines a logical model (in a StructureDefinition) that is used in the implementation guide
+	 * The resource defines a logical model (in a StructureDefinition) that is used in the implementation guide.
 	 * <!-- end-model-doc -->
 	 * @see #LOGICAL
 	 * @model name="logical"

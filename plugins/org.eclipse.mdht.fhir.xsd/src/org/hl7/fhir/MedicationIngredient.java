@@ -56,7 +56,7 @@ public interface MedicationIngredient extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Specifies how many (or how much) of the items there are in this Medication; e.g. 250 mg per tablet.
+	 * Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Amount</em>' containment reference.
 	 * @see #setAmount(Ratio)

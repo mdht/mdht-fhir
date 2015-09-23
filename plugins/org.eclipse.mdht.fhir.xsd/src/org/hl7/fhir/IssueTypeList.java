@@ -315,7 +315,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Content invalid against the Specification or a Profile
+	 * Content invalid against the specification or a profile.
 	 * <!-- end-model-doc -->
 	 * @see #INVALID
 	 * @model name="invalid"
@@ -329,7 +329,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A structural issue in the content such as wrong namespace, or unable to parse the content completely, or invalid json syntax
+	 * A structural issue in the content such as wrong namespace, or unable to parse the content completely, or invalid json syntax.
 	 * <!-- end-model-doc -->
 	 * @see #STRUCTURE
 	 * @model name="structure"
@@ -343,7 +343,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A required element is missing
+	 * A required element is missing.
 	 * <!-- end-model-doc -->
 	 * @see #REQUIRED
 	 * @model name="required"
@@ -357,7 +357,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * element value invalid
+	 * An element value is invalid.
 	 * <!-- end-model-doc -->
 	 * @see #VALUE
 	 * @model name="value"
@@ -371,7 +371,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A content validation rule failed - e.g. a schematron rule
+	 * A content validation rule failed - e.g. a schematron rule.
 	 * <!-- end-model-doc -->
 	 * @see #INVARIANT
 	 * @model name="invariant"
@@ -385,7 +385,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An authentication/authorization/permissions issueof some kind
+	 * An authentication/authorization/permissions issue of some kind.
 	 * <!-- end-model-doc -->
 	 * @see #SECURITY
 	 * @model name="security"
@@ -399,7 +399,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * the client needs to initiate an authentication process
+	 * The client needs to initiate an authentication process.
 	 * <!-- end-model-doc -->
 	 * @see #LOGIN
 	 * @model name="login"
@@ -413,7 +413,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The user or system was not able to be authenticated (either there is no process, or the proferred token is unacceptable)
+	 * The user or system was not able to be authenticated (either there is no process, or the proferred token is unacceptable).
 	 * <!-- end-model-doc -->
 	 * @see #UNKNOWN
 	 * @model name="unknown"
@@ -427,7 +427,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * User session expired; a login may be required
+	 * User session expired; a login may be required.
 	 * <!-- end-model-doc -->
 	 * @see #EXPIRED
 	 * @model name="expired"
@@ -441,7 +441,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The user does not have the rights to perform this action
+	 * The user does not have the rights to perform this action.
 	 * <!-- end-model-doc -->
 	 * @see #FORBIDDEN
 	 * @model name="forbidden"
@@ -455,7 +455,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Some information was not or may not have been returned due to business rules, consent or privacy rules, or access permission constraints.  This information may be accessible through alternate processes
+	 * Some information was not or may not have been returned due to business rules, consent or privacy rules, or access permission constraints.  This information may be accessible through alternate processes.
 	 * <!-- end-model-doc -->
 	 * @see #SUPPRESSED
 	 * @model name="suppressed"
@@ -469,7 +469,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Processing issues. These are expected to be final e.g. there is no point resubmitting the same content unchanged
+	 * Processing issues. These are expected to be final e.g. there is no point resubmitting the same content unchanged.
 	 * <!-- end-model-doc -->
 	 * @see #PROCESSING
 	 * @model name="processing"
@@ -483,7 +483,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The resource or profile is not supported
+	 * The resource or profile is not supported.
 	 * <!-- end-model-doc -->
 	 * @see #NOT_SUPPORTED
 	 * @model name="notSupported" literal="not-supported"
@@ -497,7 +497,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An attempt was made to create a duplicate record
+	 * An attempt was made to create a duplicate record.
 	 * <!-- end-model-doc -->
 	 * @see #DUPLICATE
 	 * @model name="duplicate"
@@ -511,7 +511,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The reference provided was not found. In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the content is not found further into the application architecture
+	 * The reference provided was not found. In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the content is not found further into the application architecture.
 	 * <!-- end-model-doc -->
 	 * @see #NOT_FOUND
 	 * @model name="notFound" literal="not-found"
@@ -525,7 +525,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Provided content is too long (typically, this is a denial of service protection type of error)
+	 * Provided content is too long (typically, this is a denial of service protection type of error).
 	 * <!-- end-model-doc -->
 	 * @see #TOO_LONG
 	 * @model name="tooLong" literal="too-long"
@@ -539,7 +539,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The code or system could not be understood, or it was not valid in the context of a particular ValueSet
+	 * The code or system could not be understood, or it was not valid in the context of a particular ValueSet.code.
 	 * <!-- end-model-doc -->
 	 * @see #CODE_INVALID
 	 * @model name="codeInvalid" literal="code-invalid"
@@ -553,7 +553,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An extension was found that was not acceptable, or that could not be resolved, or a modifierExtension that was not recognised
+	 * An extension was found that was not acceptable, could not be resolved, or a modifierExtension was not recognized.
 	 * <!-- end-model-doc -->
 	 * @see #EXTENSION
 	 * @model name="extension"
@@ -567,7 +567,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The operation was stopped to protect server resources; e.g. a request for a value set expansion on all of SNOMED CT
+	 * The operation was stopped to protect server resources; e.g. a request for a value set expansion on all of SNOMED CT.
 	 * <!-- end-model-doc -->
 	 * @see #TOO_COSTLY
 	 * @model name="tooCostly" literal="too-costly"
@@ -581,7 +581,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The content/operation failed to pass some business rule, and so could not proceed
+	 * The content/operation failed to pass some business rule, and so could not proceed.
 	 * <!-- end-model-doc -->
 	 * @see #BUSINESS_RULE
 	 * @model name="businessRule" literal="business-rule"
@@ -595,7 +595,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * content could not be accepted because of an edit conflict (i.e. version aware updates) (In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the conflict is discovered further into the application architecture)
+	 * Content could not be accepted because of an edit conflict (i.e. version aware updates) (In a pure RESTful environment, this would be an HTTP 404 error, but this code may be used where the conflict is discovered further into the application architecture.)
 	 * <!-- end-model-doc -->
 	 * @see #CONFLICT
 	 * @model name="conflict"
@@ -609,7 +609,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Not all data sources typically accessed could be reached, or responded in time, so the returned information may not be complete
+	 * Not all data sources typically accessed could be reached, or responded in time, so the returned information may not be complete.
 	 * <!-- end-model-doc -->
 	 * @see #INCOMPLETE
 	 * @model name="incomplete"
@@ -623,7 +623,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Transient processing issues. The system receiving the error may be able to resubmit the same content once an underlying issue is resolved
+	 * Transient processing issues. The system receiving the error may be able to resubmit the same content once an underlying issue is resolved.
 	 * <!-- end-model-doc -->
 	 * @see #TRANSIENT
 	 * @model name="transient"
@@ -637,7 +637,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A resource/record locking failure (usually in an underlying database)
+	 * A resource/record locking failure (usually in an underlying database).
 	 * <!-- end-model-doc -->
 	 * @see #LOCK_ERROR
 	 * @model name="lockError" literal="lock-error"
@@ -651,7 +651,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The persistent store unavailable; e.g. the database is down for maintenance or similar
+	 * The persistent store is unavailable; e.g. the database is down for maintenance or similar action.
 	 * <!-- end-model-doc -->
 	 * @see #NO_STORE
 	 * @model name="noStore" literal="no-store"
@@ -665,7 +665,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An unexpected internal error
+	 * An unexpected internal error has occurred.
 	 * <!-- end-model-doc -->
 	 * @see #EXCEPTION
 	 * @model name="exception"
@@ -679,7 +679,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * An internal timeout occurred
+	 * An internal timeout has occurred.
 	 * <!-- end-model-doc -->
 	 * @see #TIMEOUT
 	 * @model name="timeout"
@@ -693,7 +693,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The system is not prepared to handle this request due to load management
+	 * The system is not prepared to handle this request due to load management.
 	 * <!-- end-model-doc -->
 	 * @see #THROTTLED
 	 * @model name="throttled"
@@ -707,7 +707,7 @@ public enum IssueTypeList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A message unrelated to the processing success of the completed operation (Examples of the latter include things like reminders of password expiry, system maintenance times, etc.)
+	 * A message unrelated to the processing success of the completed operation (examples of the latter include things like reminders of password expiry, system maintenance times, etc.).
 	 * <!-- end-model-doc -->
 	 * @see #INFORMATIONAL
 	 * @model name="informational"

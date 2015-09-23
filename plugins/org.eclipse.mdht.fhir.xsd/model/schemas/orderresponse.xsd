@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -112,34 +112,34 @@
       </xs:enumeration>
       <xs:enumeration value="accepted">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The order has been accepted, and work is in progress</xs:documentation>
+          <xs:documentation xml:lang="en">The order has been accepted, and work is in progress.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="cancelled">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Processing the order was halted at the initiators request</xs:documentation>
+          <xs:documentation xml:lang="en">Processing the order was halted at the initiators request.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="replaced">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The order has been cancelled and replaced by another</xs:documentation>
+          <xs:documentation xml:lang="en">The order has been cancelled and replaced by another.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="aborted">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Processing the order was stopped because of some workflow/business logic reason</xs:documentation>
+          <xs:documentation xml:lang="en">Processing the order was stopped because of some workflow/business logic reason.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="completed">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The order has been completed</xs:documentation>
+          <xs:documentation xml:lang="en">The order has been completed.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="OrderStatus">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The status of the response to an order</xs:documentation>
+      <xs:documentation xml:lang="en">The status of the response to an order.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>

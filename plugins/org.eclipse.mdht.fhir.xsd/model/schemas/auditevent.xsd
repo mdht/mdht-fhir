@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -82,7 +82,7 @@
         <xs:sequence>
           <xs:element name="type" minOccurs="1" maxOccurs="1" type="Coding">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifier for a family of the event.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subtype" minOccurs="0" maxOccurs="unbounded" type="Coding">
@@ -215,7 +215,7 @@
         <xs:sequence>
           <xs:element name="site" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Logical source location within the healthcare enterprise network.</xs:documentation>
+              <xs:documentation xml:lang="en">Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="identifier" minOccurs="1" maxOccurs="1" type="Identifier">
@@ -314,41 +314,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="AuditEventOutcome-list">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The operation completed successfully (whether with warnings or not).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="4">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The action was not successful due to some kind of catered for error (often equivalent to an HTTP 400 response).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="8">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="12">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="AuditEventOutcome">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Indicates whether the event succeeded or failed</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="AuditEventOutcome-list" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="AuditEventAction-list">
     <xs:restriction base="xs:string">
       <xs:enumeration value="C">
@@ -386,6 +351,41 @@
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="AuditEventAction-list" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="AuditEventOutcome-list">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The operation completed successfully (whether with warnings or not).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The action was not successful due to some kind of catered for error (often equivalent to an HTTP 400 response).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AuditEventOutcome">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Indicates whether the event succeeded or failed</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="AuditEventOutcome-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

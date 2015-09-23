@@ -44,7 +44,7 @@ public interface Composition extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Logical Identifier for the composition, assigned when created. This identifier stays constant as the composition is changed over time.
+	 * Logical identifier for the composition, assigned when created. This identifier stays constant as the composition is changed over time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference.
 	 * @see #setIdentifier(Identifier)
@@ -226,7 +226,7 @@ public interface Composition extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (I.e. machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).
+	 * Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Subject</em>' containment reference.
 	 * @see #setSubject(Reference)
@@ -253,7 +253,7 @@ public interface Composition extends DomainResource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Identifies who is responsible for the information in the composition.  (Not necessarily who typed it in.).
+	 * Identifies who is responsible for the information in the composition, not necessarily who typed it in.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Author</em>' containment reference list.
 	 * @see org.hl7.fhir.FhirPackage#getComposition_Author()

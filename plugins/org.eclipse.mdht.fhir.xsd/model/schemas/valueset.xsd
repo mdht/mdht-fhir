@@ -27,7 +27,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Sep 16, 2015 13:28+0000 for FHIR v1.0.0 
+  Generated on Tue, Sep 22, 2015 13:47+1000 for FHIR v1.0.1 
 
   Note: the schemas &amp; schematrons do not contain all of the rules about what makes resources
   valid. Implementers will still need to be familiar with the content of the specification and with
@@ -96,7 +96,7 @@
           </xs:element>
           <xs:element name="lockedDate" minOccurs="0" maxOccurs="1" type="date">
             <xs:annotation>
-              <xs:documentation xml:lang="en">If a Locked Date is defined, then the Content Logical Definition must be evaluated using the current version of all referenced code system(s) and value sets as of the Locked Date.</xs:documentation>
+              <xs:documentation xml:lang="en">If a locked date is defined, then the Content Logical Definition must be evaluated using the current version of all referenced code system(s) and value set instances as of the locked date.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
@@ -116,7 +116,7 @@
           </xs:element>
           <xs:element name="requirements" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Explains why this value set is needed and why it's been constrained as it has.</xs:documentation>
+              <xs:documentation xml:lang="en">Explains why this value set is needed and why it has been constrained as it has.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="copyright" minOccurs="0" maxOccurs="1" type="string">
@@ -131,7 +131,7 @@
           </xs:element>
           <xs:element name="codeSystem" type="ValueSet.CodeSystem" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A definition of an code system, inlined into the value set (as a packaging convenience). Note that the inline code system may be used from other value sets by referring to it's (codeSystem.system) directly.</xs:documentation>
+              <xs:documentation xml:lang="en">A definition of a code system, inlined into the value set (as a packaging convenience). Note that the inline code system may be used from other value sets by referring to it's (codeSystem.system) directly.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="compose" type="ValueSet.Compose" minOccurs="0" maxOccurs="1">
@@ -193,7 +193,7 @@
           </xs:element>
           <xs:element name="concept" type="ValueSet.Concept" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meaning of the heirachical relationships are.</xs:documentation>
+              <xs:documentation xml:lang="en">Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meaning of the hierarchical relationships are.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -224,7 +224,7 @@
           </xs:element>
           <xs:element name="definition" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The formal definition of the concept. The value set resource does not make formal definitions required, because of the prevalence of legacy systems. However, but they are highly recommended, as without them there is no formal meaning associated with the concept.</xs:documentation>
+              <xs:documentation xml:lang="en">The formal definition of the concept. The value set resource does not make formal definitions required, because of the prevalence of legacy systems. However, they are highly recommended, as without them there is no formal meaning associated with the concept.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="designation" type="ValueSet.Designation" minOccurs="0" maxOccurs="unbounded">
@@ -234,7 +234,7 @@
           </xs:element>
           <xs:element name="concept" type="ValueSet.Concept" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Child Concepts - a hierarchy of concepts. The nature of the relationships is variable (is-a / contains / categorises) and can only be determined by examining the definitions of the concepts.</xs:documentation>
+              <xs:documentation xml:lang="en">Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) and can only be determined by examining the definitions of the concepts.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -395,12 +395,12 @@
           </xs:element>
           <xs:element name="total" minOccurs="0" maxOccurs="1" type="integer">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The total nober of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.</xs:documentation>
+              <xs:documentation xml:lang="en">The total number of concepts in the expansion. If the number of concept nodes in this resource is less than the stated number, then the server can return more using the offset parameter.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="offset" minOccurs="0" maxOccurs="1" type="integer">
             <xs:annotation>
-              <xs:documentation xml:lang="en">If paging is being used, the offset at which this resource starts - e.g. this resource is a partial view into the expansion. If paging is not being used, this element SHALL not be present.</xs:documentation>
+              <xs:documentation xml:lang="en">If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL not be present.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="parameter" type="ValueSet.Parameter" minOccurs="0" maxOccurs="unbounded">
@@ -468,7 +468,7 @@
           </xs:element>
           <xs:element name="code" minOccurs="0" maxOccurs="1" type="code">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and doesn't represent a valid code in the value set.</xs:documentation>
+              <xs:documentation xml:lang="en">The code for this item in the expansion hierarchy. If this code is missing the entry in the hierarchy is a place holder (abstract) and does not represent a valid code in the value set.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="display" minOccurs="0" maxOccurs="1" type="string">
@@ -489,39 +489,39 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="=">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The specified property of the code equals the provided value</xs:documentation>
+          <xs:documentation xml:lang="en">The specified property of the code equals the provided value.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="is-a">
         <xs:annotation>
-          <xs:documentation xml:lang="en">Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself</xs:documentation>
+          <xs:documentation xml:lang="en">Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="is-not-a">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The specified property of the code does not have an is-a relationship with the provided value</xs:documentation>
+          <xs:documentation xml:lang="en">The specified property of the code does not have an is-a relationship with the provided value.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="regex">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The specified property of the code  matches the regex specified in the provided value</xs:documentation>
+          <xs:documentation xml:lang="en">The specified property of the code  matches the regex specified in the provided value.</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="in">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list)</xs:documentation>
+          <xs:documentation xml:lang="en">The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="not-in">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list)</xs:documentation>
+          <xs:documentation xml:lang="en">The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="FilterOperator">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The kind of operation to perform as a part of a property based filter</xs:documentation>
+      <xs:documentation xml:lang="en">The kind of operation to perform as a part of a property based filter.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>

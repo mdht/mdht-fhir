@@ -83,7 +83,7 @@ public enum ParticipantRequiredList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The participant is excluded from the appointment, and may not be informed of the appointment taking place. (appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+	 * The participant is excluded from the appointment, and may not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
 	 * <!-- end-model-doc -->
 	 * @see #INFORMATION_ONLY
 	 * @model name="informationOnly" literal="information-only"

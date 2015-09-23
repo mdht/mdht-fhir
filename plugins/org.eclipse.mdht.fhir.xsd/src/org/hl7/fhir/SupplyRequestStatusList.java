@@ -65,7 +65,7 @@ public enum SupplyRequestStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Supply has been requested, but not dispensed
+	 * Supply has been requested, but not dispensed.
 	 * <!-- end-model-doc -->
 	 * @see #REQUESTED
 	 * @model name="requested"
@@ -79,7 +79,7 @@ public enum SupplyRequestStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Supply has been received by the requestor
+	 * Supply has been received by the requestor.
 	 * <!-- end-model-doc -->
 	 * @see #COMPLETED
 	 * @model name="completed"
@@ -93,7 +93,7 @@ public enum SupplyRequestStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The supply will not be completed because the supplier was unable or unwilling to supply the item
+	 * The supply will not be completed because the supplier was unable or unwilling to supply the item.
 	 * <!-- end-model-doc -->
 	 * @see #FAILED
 	 * @model name="failed"
@@ -107,7 +107,7 @@ public enum SupplyRequestStatusList implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The orderer of the supply cancelled the request
+	 * The orderer of the supply cancelled the request.
 	 * <!-- end-model-doc -->
 	 * @see #CANCELLED
 	 * @model name="cancelled"

@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This resource provides the insurance Enrollment details to the insurer regarding a specified coverage.
+ * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  * If the element is present, it must have either a @value, an @id, or extensions
  * <!-- end-model-doc -->
  *

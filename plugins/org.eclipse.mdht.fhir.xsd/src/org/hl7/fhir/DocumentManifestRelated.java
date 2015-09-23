@@ -30,7 +30,7 @@ public interface DocumentManifestRelated extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Related identifier to this DocumentManifest. If both id and ref are present they shall refer to the same thing.
+	 * Related identifier to this DocumentManifest.  For example, Order numbers, accession numbers, XDW workflow numbers.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference.
 	 * @see #setIdentifier(Identifier)
@@ -56,7 +56,7 @@ public interface DocumentManifestRelated extends BackboneElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Related Resource to this DocumentManifest. If both id and ref are present they shall refer to the same thing.
+	 * Related Resource to this DocumentManifest. For example, Order, DiagnosticOrder,  Procedure, EligibilityRequest, etc.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ref</em>' containment reference.
 	 * @see #setRef(Reference)
