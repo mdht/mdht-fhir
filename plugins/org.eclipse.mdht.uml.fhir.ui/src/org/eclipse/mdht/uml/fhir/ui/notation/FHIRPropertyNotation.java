@@ -18,6 +18,7 @@ import org.eclipse.mdht.uml.fhir.ElementDefinition;
 import org.eclipse.mdht.uml.fhir.FHIRPackage;
 import org.eclipse.mdht.uml.fhir.TypeChoice;
 import org.eclipse.mdht.uml.fhir.ValueSetBinding;
+import org.eclipse.mdht.uml.fhir.transform.FhirModelUtil;
 import org.eclipse.mdht.uml.fhir.util.ProfileUtil;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
@@ -119,7 +120,14 @@ public class FHIRPropertyNotation extends PropertyNotationUtil {
 			}
 		}
 
-		if ((style & INotationConstants.DISP_VOCABULARY) != 0) {
+		String extensionMetadata = getExtensionAnnotations(property);
+		if (extensionMetadata.length() > 0) {
+			annotations.append(annotations.length() > 0 ? " ": "");
+			annotations.append(extensionMetadata);
+		}
+
+		// extension metadata includes vocab binding, if available
+		if (extensionMetadata.length() == 0 && (style & INotationConstants.DISP_VOCABULARY) != 0) {
 			String termMetadata = getTerminologyAnnotations(property);
 			if (termMetadata.length() > 0) {
 				annotations.append(annotations.length() > 0 ? " ": "");
@@ -277,6 +285,36 @@ public class FHIRPropertyNotation extends PropertyNotationUtil {
 		return typeLabel.toString();
 	}
 
+	protected static String getExtensionAnnotations(Property property) {
+		StringBuffer annotation = new StringBuffer();
+		if (property.getType() instanceof Classifier
+				&& FhirModelUtil.isExtension((Classifier)property.getType())) {
+			Classifier extension = (Classifier)property.getType();
+			Property value = null;
+			for (Property prop : extension.getAttributes()) {
+				if (prop.getName().startsWith("value")) {
+					value = prop;
+					break;
+				}
+			}
+			if (value != null && value.getUpper() > 0 && value.getType() != null) {
+				annotation.append(value.getType().getName());
+
+				// the property may override valueset binding, but if not, include binding from extension definition
+				String termMetadata = getTerminologyAnnotations(property);
+				if (termMetadata.length() == 0) {
+					termMetadata = getTerminologyAnnotations(value);
+				}
+				if (termMetadata.length() > 0) {
+					annotation.append(annotation.length() > 0 ? " ": "");
+					annotation.append(termMetadata);
+				}
+			}
+		}
+		
+		return annotation.toString();
+	}
+
 	protected static String getTerminologyAnnotations(Property property) {
 		StringBuffer annotation = new StringBuffer();
 		ValueSetBinding binding = (ValueSetBinding) ProfileUtil.getStereotypeApplication(property, FHIRPackage.eINSTANCE.getValueSetBinding());
@@ -294,7 +332,7 @@ public class FHIRPropertyNotation extends PropertyNotationUtil {
 
 			if (valueSetName != null) {
 			valueSetName = valueSetName.substring(valueSetName.lastIndexOf("/") + 1);
-			annotation.append(" [");
+			annotation.append("[");
 			annotation.append(valueSetName);
 			annotation.append("]");
 			}

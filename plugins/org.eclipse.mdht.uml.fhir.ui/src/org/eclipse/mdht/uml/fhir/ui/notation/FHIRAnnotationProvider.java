@@ -139,20 +139,6 @@ public class FHIRAnnotationProvider implements IExtendedNotationProvider, IExecu
 //		}
 
 		Image image = null;
-		// For associations, use image for the navigable end.
-//		if (element instanceof Association) {
-//			Property navigableEnd = UMLUtil.getNavigableEnd((Association) element);
-//			if (navigableEnd != null) {
-//				element = navigableEnd;
-//			}
-//		}
-//		if (element instanceof Property) {
-//			Property property = (Property) element;
-//			if (property.getType() instanceof Classifier) {
-//				element = property.getType();
-//			}
-//		}
-		
 		if (element instanceof Class) {
 			Class umlClass = (Class) element;
 
@@ -167,9 +153,6 @@ public class FHIRAnnotationProvider implements IExtendedNotationProvider, IExecu
 					image = Activator.getDefault().getBundledImage("icons/fhir-type/icon_extension_simple.png");
 				}
 			}
-//			else if (FhirModelUtil.isKindOf(umlClass, ModelConstants.RESOURCE_CLASS_NAME)) {
-//				image = Activator.getDefault().getBundledImage("icons/fhir-type/icon_reference.png");
-//			}
 			else if (FhirModelUtil.isKindOf(umlClass, ModelConstants.DATATYPE_CLASS_NAME)) {
 				// Is primitive type if DataType has a 'value' attribute
 				boolean isPrimitive = umlClass.getAttribute("value", null) != null || umlClass.getInheritedMember("value") != null;
@@ -184,9 +167,8 @@ public class FHIRAnnotationProvider implements IExtendedNotationProvider, IExecu
 			else if (FhirModelUtil.getStructureDefinition(umlClass) != null) {
 				image = Activator.getDefault().getBundledImage("icons/fhir-type/icon_profile.png");
 			}
-			
 		}
-		
+
 //		else if (element instanceof Property) {
 //			Property property = (Property) element;
 //			if (property.getType() != null && FhirModelUtil.isExtension((Classifier) property.getType())) {
@@ -201,7 +183,23 @@ public class FHIRAnnotationProvider implements IExtendedNotationProvider, IExecu
 //			}
 //		}
 		
-		return (image != null) ? image : null;
+		return image;
+	}
+	
+	public Object getElementTypeImage(Element element) {
+		Object image = null;
+		if (element instanceof Class) {
+			Class umlClass = (Class) element;
+
+			if (FhirModelUtil.isKindOf(umlClass, ModelConstants.RESOURCE_CLASS_NAME)) {
+				image = Activator.getDefault().getBundledImage("icons/fhir-type/icon_reference.png");
+			}
+			else {
+				image = getElementImage(element);
+			}
+		}
+		
+		return image;
 	}
 
 	public List<Classifier> getTypeChoice(Property property) {
@@ -317,9 +315,34 @@ public class FHIRAnnotationProvider implements IExtendedNotationProvider, IExecu
 	protected static String getMetadata(Class umlClass) {
 		StringBuffer value = new StringBuffer();
 		
+		// Omit for now, makes the table display too busy
+//		if (FhirModelUtil.isExtension(umlClass)) {
+//			value.append(getExtensionAnnotations(umlClass));
+//		}
 
 		return value.toString();
 	}
+
+	protected static String getExtensionAnnotations(Classifier extension) {
+		StringBuffer annotation = new StringBuffer();
+		Property value = null;
+		for (Property prop : extension.getAttributes()) {
+			if (prop.getName().startsWith("value")) {
+				value = prop;
+				break;
+			}
+		}
+		if (value != null && value.getUpper() > 0 && value.getType() != null) {
+			annotation.append(value.getType().getName());
+
+			String termMetadata = FHIRPropertyNotation.getTerminologyAnnotations(value);
+			annotation.append(annotation.length() > 0 ? " ": "");
+			annotation.append(termMetadata);
+		}
+		
+		return annotation.toString();
+	}
+
 
 	protected static String getMetadata(Enumeration umlEnum) {
 		StringBuffer value = new StringBuffer();
