@@ -371,6 +371,7 @@ public class ModelImporter implements ModelConstants {
 			return profileClass;
 		}
 
+		boolean isFhirDefinedType = modelIndexer.isDefinedType(structureDef.getName().getValue());
 		PrimitiveType primitiveType = null;
 		String packageName = PACKAGE_NAME_PROFILES;
 		StructureDefinitionKindList structureKind = structureDef.getKind().getValue();
@@ -579,23 +580,53 @@ public class ModelImporter implements ModelConstants {
 				continue;
 			}
 
-			 // Get inherited property.  If typeList is empty, and inherited not null, 
-			 // add inherited property type to typeList.
 			boolean isProhibitedElement = elementDef.getMax() != null && "0".equals(elementDef.getMax().getValue());
 			String propertyName = getPropertyName(elementDef);
-			
-			//TODO discover all wildcard elements from all inherited properties, endsWith "[x]"
-			//TODO this is a temporary hack until a more general solution is available, test for wildcard prefix
-			if ("valueQuantity".equals(propertyName)) {
-				propertyName = "value[x]";
-				Class quantityType = importStructureDefinition("Quantity");
-				if (quantityType != null) {
-					typeList.clear();
-					typeList.add(quantityType);
+
+			// Map of all inherited wildcard properties, e.g. value[]
+			Map<String,Property> wildcardProperties = new HashMap<String,Property>();
+
+			if (ownerClass != null) {
+				for (Property attr : ownerClass.allAttributes()) {
+					if (attr.getName().endsWith("[x]")) {
+						String wildcardName = attr.getName().substring(0, attr.getName().length() - 3);
+						if (wildcardProperties.get(wildcardName) == null) {
+							wildcardProperties.put(wildcardName, attr);
+						}
+					}
 				}
 			}
 			
-			Property inheritedProperty = org.openhealthtools.mdht.uml.common.util.UMLUtil.getInheritedProperty(ownerClass, propertyName);
+			Property inheritedProperty = null;
+			
+			// Look for inherited wildcard property, unless this is a wildcard (ends with [x]).
+			if (propertyName.indexOf("[x]") == -1) {
+				for (String wildcardName : wildcardProperties.keySet()) {
+					// check for name length to avoid unintended matching, e.g. datatype 'value' attribute
+					if (propertyName.length() > wildcardName.length() && propertyName.startsWith(wildcardName)) {
+						inheritedProperty = wildcardProperties.get(wildcardName);
+						
+						// if no explicit type, find data type from wildcard suffix
+						if (typeList.isEmpty()) {
+							String typeName = propertyName.substring(wildcardName.length());
+							Class wildcardType = importStructureDefinition(typeName);
+							if (wildcardType != null) {
+								typeList.add(wildcardType);
+							}
+							else {
+								System.err.println("Cannot find wildcard type: '" + typeName + "' in structDef: " + structureDef.getId().getValue() + " path: " + elementDef.getPath().getValue());
+							}
+						}
+						break;
+					}
+				}
+			}
+			
+			if (inheritedProperty == null && !isFhirDefinedType) {
+				inheritedProperty = org.openhealthtools.mdht.uml.common.util.UMLUtil.getInheritedProperty(ownerClass, propertyName);
+			}
+
+			 // Get inherited property.  If typeList is empty, and inherited not null, add inherited property type to typeList.
 			if (!isProhibitedElement && typeList.isEmpty() && inheritedProperty != null 
 					&& inheritedProperty.getType() instanceof Classifier) {
 				typeList.add((Classifier)inheritedProperty.getType());
@@ -717,9 +748,12 @@ public class ModelImporter implements ModelConstants {
 					property.getSubsettedProperties().add(subsettedProperty);
 				}
 			}
-//			else if (inheritedProperty != null) {
-//				property.getRedefinedProperties().add(inheritedProperty);
-//			}
+			else if (inheritedProperty != null) {
+				property.getRedefinedProperties().add(inheritedProperty);
+			}
+			else if (!isFhirDefinedType) {
+				System.err.println("Inherited property not found: " + property.getQualifiedName());
+			}
 
 			addComments(property, elementDef);
 			

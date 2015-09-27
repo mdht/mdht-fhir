@@ -32,7 +32,7 @@ public class ModelIndexer implements ModelConstants {
 	// These three sets are populated from FHIR defined ValueSets
 	private Set<String> resourceTypes = new HashSet<String>();
 	private Set<String> dataTypes = new HashSet<String>();
-	private Set<String> definedTypes = new HashSet<String>();
+//	private Set<String> definedTypes = new HashSet<String>();
 	
 	// key = FHIR ValueSet URI, value = UML Enumeration
 	private Map<String,Enumeration> valueSetMap = new HashMap<String,Enumeration>();
@@ -64,7 +64,7 @@ public class ModelIndexer implements ModelConstants {
 	}
 
 	public boolean isDefinedType(String typeName) {
-		return definedTypes.contains(typeName);
+		return isCoreDataType(typeName) || isCoreResourceType(typeName);
 	}
 
 	public boolean isCoreResourceType(Classifier classifier) {
@@ -180,11 +180,11 @@ public class ModelIndexer implements ModelConstants {
 						dataTypes.add(literal.getName());
 					}
 				}
-				else if (valueSet.getUri().equals(FHIR_VALUESET_URI_BASE + VALUESET_ID_DEFINED_TYPES)) {
-					for (EnumerationLiteral literal : umlEnumeration.getOwnedLiterals()) {
-						definedTypes.add(literal.getName());
-					}
-				}
+//				else if (valueSet.getUri().equals(FHIR_VALUESET_URI_BASE + VALUESET_ID_DEFINED_TYPES)) {
+//					for (EnumerationLiteral literal : umlEnumeration.getOwnedLiterals()) {
+//						definedTypes.add(literal.getName());
+//					}
+//				}
 			}
 		}
 	}
