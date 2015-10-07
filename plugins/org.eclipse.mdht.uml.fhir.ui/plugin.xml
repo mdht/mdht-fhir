@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
+
+<!--
+ Copyright (c) 2015 David Carlson, and others.
+ All rights reserved.   This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+
+ Contributors:
+   David Carlson (Clinical Cloud Solutions, LLC) - Initial API and implementation
+
+-->
+
 <plugin>
    <extension point="org.openhealthtools.mdht.uml.common.notation">
       <provider profileURI="http://www.eclipse.org/mdht/schema/profile/fhir"
@@ -77,16 +90,6 @@
                name="notBaseTypes"
                optional="true"/>
       </command>
-      <!--
-      <command
-            id="org.eclipse.mdht.uml.fhir.ui.commands.addStructureDefinitionDataType"
-            name="%addFHIR.StructureDefinition.datatype.label"
-            categoryId="org.eclipse.mdht.uml.fhir.ui.commands.category.edit"/>
-      <command
-            id="org.eclipse.mdht.uml.fhir.ui.commands.addExtensionDefinition"
-            name="%addFHIR.Extension.definition.label"
-            categoryId="org.eclipse.mdht.uml.fhir.ui.commands.category.edit"/>
-      -->
       
       <command
             id="org.eclipse.mdht.uml.fhir.ui.commands.addValueSet"
@@ -121,20 +124,6 @@
                optional="true">
          </commandParameter>
       </command>
-      <!--
-      <command
-            id="org.eclipse.mdht.uml.fhir.ui.commands.addDescriptionComment"
-            name="%addFHIR.Comment.description.label"
-            categoryId="org.eclipse.mdht.uml.fhir.ui.commands.category.edit"/>
-      <command
-            id="org.eclipse.mdht.uml.fhir.ui.commands.addShortDescriptionComment"
-            name="%addFHIR.Comment.short.description.label"
-            categoryId="org.eclipse.mdht.uml.fhir.ui.commands.category.edit"/>
-      <command
-            id="org.eclipse.mdht.uml.fhir.ui.commands.addRequirementsComment"
-            name="%addFHIR.Comment.requirements.label"
-            categoryId="org.eclipse.mdht.uml.fhir.ui.commands.category.edit"/>
-      -->
             
       <command
             id="org.eclipse.mdht.uml.fhir.ui.commands.importDefinitions"
