@@ -1,0 +1,8 @@
+The ECore model and generated Java code in this plugin are created from the HL7 FHIR specification XML Schemas.
+To update the model with new FHIR version schemas, or to view the schemas used for the current model, see:
+
+http://hl7.org/fhir/DSTU2/downloads.html
+
+Download the "Validation Schemas" ZIP and unpack into this directory.
+
+The current ECore model was imported from FHIR DSTU2 build version 1.0.1 dated Sept 23, 2015.
