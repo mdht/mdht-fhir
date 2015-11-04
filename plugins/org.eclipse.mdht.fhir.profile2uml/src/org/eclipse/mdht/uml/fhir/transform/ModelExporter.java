@@ -27,6 +27,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.mdht.uml.fhir.FHIRPackage;
 import org.eclipse.mdht.uml.fhir.TypeChoice;
+import org.eclipse.mdht.uml.fhir.common.util.FhirModelUtil;
+import org.eclipse.mdht.uml.fhir.common.util.ModelConstants;
+import org.eclipse.mdht.uml.fhir.common.util.ModelIndexer;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Comment;
@@ -99,7 +102,7 @@ public class ModelExporter implements ModelConstants {
 		}
 		
 		for (Classifier parent : umlClass.getGenerals()) {
-			Uri baseUri = FhirModelUtil.getStructureDefinitionUri(parent);
+			Uri baseUri = getStructureDefinitionUri(parent);
 			if (baseUri != null) {
 				structureDef.setBase(baseUri);
 			}
@@ -386,6 +389,18 @@ public class ModelExporter implements ModelConstants {
 		}
 		return elementDefType;
 	}
+
+	private Uri getStructureDefinitionUri(Classifier umlClass) {
+		Uri uri = null;
+		org.eclipse.mdht.uml.fhir.StructureDefinition structureDefStereotype = FhirModelUtil.getStructureDefinition(umlClass);
+		if (structureDefStereotype != null && structureDefStereotype.getUri() != null) {
+			uri = FhirFactory.eINSTANCE.createUri();
+			uri.setValue(structureDefStereotype.getUri());
+		}
+		
+		return uri;
+	}
+	
 
 	private Classifier getConstrainedType(Classifier profileClass) {
 		if (modelIndexer.isDefinedType(profileClass)) {

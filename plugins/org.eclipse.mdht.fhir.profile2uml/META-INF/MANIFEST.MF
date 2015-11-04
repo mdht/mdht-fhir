@@ -11,8 +11,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecore,
  org.eclipse.uml2.uml,
  org.eclipse.mdht.fhir.xsd,
- org.openhealthtools.mdht.uml.validation,
  org.eclipse.mdht.uml.fhir,
+ org.eclipse.mdht.uml.fhir.common,
+ org.openhealthtools.mdht.uml.validation,
  org.openhealthtools.mdht.uml.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

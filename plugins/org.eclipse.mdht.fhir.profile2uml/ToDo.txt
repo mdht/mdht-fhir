@@ -67,6 +67,10 @@ Model Mapping
   -- e.g. USLab-ObsCode.valueCodeableConcept
   -- DAF-MedicationOrder.medication[x] and .medicationCodeableConcept slices
 
+- TypeChoice
+  -- all 0..* profiles for each type in choice list
+     --- or, import each profile as a separate choice member?  *****
+
 - Import ElementDef elements: 
   -- default, fixed, pattern, example
   -- minValue, maxValue, maxLength
