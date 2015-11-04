@@ -18,7 +18,7 @@ import org.eclipse.mdht.uml.fhir.ElementDefinition;
 import org.eclipse.mdht.uml.fhir.FHIRPackage;
 import org.eclipse.mdht.uml.fhir.TypeChoice;
 import org.eclipse.mdht.uml.fhir.ValueSetBinding;
-import org.eclipse.mdht.uml.fhir.transform.FhirModelUtil;
+import org.eclipse.mdht.uml.fhir.common.util.FhirModelUtil;
 import org.eclipse.mdht.uml.fhir.util.ProfileUtil;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;

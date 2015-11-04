@@ -540,4 +540,40 @@
       </handler>
    </extension>
    
+   <!-- Properties view tab contribution -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+		<propertyTabs contributorId="org.openhealthtools.mdht.uml.ui.properties">   
+			<propertyTab
+               category="domain"
+               label="%tab.fhir.label"
+               afterTab="property.tab.GeneralPropertySection"
+               id="property.tab.FHIRPropertySection">           
+			</propertyTab> 
+	         <propertyTab
+	           label="%tab.fhir.types.label"
+	           category="domain"
+	           id="property.tab.FHIRTypesSection"
+	           afterTab="property.tab.FHIRPropertySection"
+	           indented="true">
+	         </propertyTab> 
+		</propertyTabs>
+	</extension>
+	
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+       <propertySections contributorId="org.openhealthtools.mdht.uml.ui.properties">
+          <propertySection tab="property.tab.FHIRPropertySection" 
+	 	     class="org.eclipse.mdht.uml.fhir.ui.properties.ElementDefinitionSection" 
+             filter="org.eclipse.mdht.uml.fhir.ui.filter.ElementDefinitionItemFilter"
+	 	     id="property.section.ElementDefinitionSection">
+	      </propertySection>
+	  </propertySections>
+       <propertySections contributorId="org.openhealthtools.mdht.uml.ui.properties">
+          <propertySection tab="property.tab.FHIRTypesSection" 
+	 	     class="org.eclipse.mdht.uml.fhir.ui.properties.TypeChoiceSection" 
+             filter="org.eclipse.mdht.uml.fhir.ui.filter.ElementDefinitionItemFilter"
+	 	     id="property.section.TypeChoiceSection">
+	      </propertySection>
+	  </propertySections>
+   </extension> 
+ 
 </plugin>

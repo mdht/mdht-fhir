@@ -4,6 +4,13 @@ FHIR UI Tooling
 - Terminology browsing
   -- ???
 
+- Properties Tabs
+  -- Type Choice (use table, e.g. MDR Identifiers)
+  	-- if has existing type that is not Resource, DataType, or Base, add it to the choice list
+  	-- set property type to appropriate abstract type
+  -- Value Set Binding
+    -- dialog to select a value set, or enter URL
+
 - Preferences Page
   -- Servers
      -- Patient Server

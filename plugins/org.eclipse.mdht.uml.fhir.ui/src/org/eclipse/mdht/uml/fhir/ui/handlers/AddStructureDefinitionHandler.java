@@ -16,7 +16,7 @@ import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.mdht.uml.fhir.FHIRPackage;
 import org.eclipse.mdht.uml.fhir.StructureDefinition;
-import org.eclipse.mdht.uml.fhir.transform.FhirModelUtil;
+import org.eclipse.mdht.uml.fhir.common.util.FhirModelUtil;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
