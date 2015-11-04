@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.mdht.uml.fhir.common
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: org.eclipse.mdht.uml.fhir.common.internal.Activator
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.mdht.uml.fhir
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.mdht.uml.fhir.common.util
