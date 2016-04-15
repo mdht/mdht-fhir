@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>FHIR Models</name>
+	<name>org.eclipse.mdht.fhir.model</name>
 	<comment></comment>
 	<projects>
 	</projects>
